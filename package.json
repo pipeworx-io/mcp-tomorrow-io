@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-tomorrow-io",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Tomorrow.io MCP — wraps the Tomorrow.io Weather API (api.tomorrow.io/v4)",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-tomorrow-io": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "tomorrow-io"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-tomorrow-io.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/tomorrow-io",
   "pipeworx": {
-    "sourceHash": "v1-4c4f39d6c046cc2155a967a18d69d28b8e5a46b52e91864574d8d8dc55f13b7a",
-    "sourceCommit": "66a0692f029179984440cef6938cba7fdd41d66d"
+    "mode": "gateway",
+    "slug": "tomorrow-io",
+    "gatewaySlug": "tomorrow-io",
+    "sourceHash": "v1-5731f11db338afebff8340e31ad756b2232fb47aeb704e2cddd91e4b198a9b74",
+    "sourceCommit": "f47d581679e1e887373df51ba623f891fbe4c464"
   }
 }

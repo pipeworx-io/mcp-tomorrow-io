@@ -1,0 +1,54 @@
+[
+  {
+    "name": "realtime",
+    "description": "Get current/real-time weather conditions for a location — temperature, feels-like, humidity, wind, precipitation probability, cloud cover, UV index, and visibility. Location can be \"lat,lon\" coordinates or a city name. Example: realtime({ location: \"new york\", units: \"imperial\" }) or realtime({ location: \"40.71,-74.01\" })",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "location": {
+          "type": "string",
+          "description": "Location to look up — either \"lat,lon\" coordinates (e.g. \"40.71,-74.01\") or a city name (e.g. \"new york\", \"london\")"
+        },
+        "units": {
+          "type": "string",
+          "description": "Unit system: \"metric\" (default) or \"imperial\""
+        },
+        "_apiKey": {
+          "type": "string",
+          "description": "Tomorrow.io API key (optional — get a free one at tomorrow.io; if omitted the platform key is used)"
+        }
+      },
+      "required": [
+        "location"
+      ]
+    }
+  },
+  {
+    "name": "forecast",
+    "description": "Get a daily or hourly weather forecast for a location. Returns a list of forecast periods with conditions, temperatures, precipitation probability, and wind. Location can be \"lat,lon\" coordinates or a city name. Example: forecast({ location: \"london\", timestep: \"1d\", units: \"metric\" })",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "location": {
+          "type": "string",
+          "description": "Location to look up — either \"lat,lon\" coordinates (e.g. \"40.71,-74.01\") or a city name (e.g. \"new york\")"
+        },
+        "timestep": {
+          "type": "string",
+          "description": "Forecast granularity: \"1d\" daily (default) or \"1h\" hourly"
+        },
+        "units": {
+          "type": "string",
+          "description": "Unit system: \"metric\" (default) or \"imperial\""
+        },
+        "_apiKey": {
+          "type": "string",
+          "description": "Tomorrow.io API key (optional — get a free one at tomorrow.io; if omitted the platform key is used)"
+        }
+      },
+      "required": [
+        "location"
+      ]
+    }
+  }
+]
