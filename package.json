@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-tomorrow-io",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Tomorrow.io MCP — wraps the Tomorrow.io Weather API (api.tomorrow.io/v4)",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "tomorrow-io",
     "gatewaySlug": "tomorrow-io",
-    "sourceHash": "v1-5731f11db338afebff8340e31ad756b2232fb47aeb704e2cddd91e4b198a9b74",
-    "sourceCommit": "f47d581679e1e887373df51ba623f891fbe4c464"
+    "sourceHash": "v1-461808079accca3de35a370f0e3707af6963cd2e6f1d73f7f2f42fed112c533e",
+    "sourceCommit": "868e119d526d5409447b7ee2149afba7eb9d2593"
   }
 }
